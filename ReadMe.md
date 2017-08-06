@@ -46,6 +46,10 @@ SDK系统 | JDK1.8
     ALTER TABLE "public"."t_items" ADD CONSTRAINT "t_items_pkey" PRIMARY KEY ("id");
     ```
     
+    - 修改数据库配置
+        - src/main/resources目录下的application.yml
+        ![](./images/update-db-cfg.jpg)
+    
     - Maven Docker File
     ```dockerfile
     FROM java:8
