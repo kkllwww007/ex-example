@@ -3,7 +3,7 @@ package com.test.utils;
 import java.util.UUID;
 
 /**
- * 项目名称：${MODULE_NAME}
+ * 项目名称：ex-example
  * 包名：com.test.utils
  * 类名称：IdUtils.java
  * 类描述：

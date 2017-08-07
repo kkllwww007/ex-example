@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * 项目名称：${MODULE_NAME}
+ * 项目名称：ex-example
  * 包名：com.test
  * 类名称：Application.java
  * 类描述：

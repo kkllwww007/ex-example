@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 项目名称：${MODULE_NAME}
+ * 项目名称：ex-example
  * 包名：com.test.dto
  * 类名称：ItemDto.java
  * 类描述：

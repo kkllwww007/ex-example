@@ -31,14 +31,14 @@ public class ItemServiceTest {
     @Test
     public void testQuery() {
         QueryItemVo vo = new QueryItemVo();
-        /*vo.setType(ItemTypeEnum.A.toString());
+        vo.setType(ItemTypeEnum.A.toString());
         vo.setItemName("笔记本");
         vo.setPeriodFrom("2017-08-06 00:00:00");
         vo.setPeriodTo("2017-08-06 23:59:59");
         vo.setPriceWithTaxFrom("50.23");
-        vo.setPriceWithTaxTo("100.88");*/
+        vo.setPriceWithTaxTo("100.88");
 
-        String body = this.restTemplate.postForObject("http://192.168.0.105:8080/api/v1/item/query/5", vo, String.class);
+        String body = this.restTemplate.postForObject("/api/v1/item/query/5", vo, String.class);
         System.out.println(body);
         assertThat(body).isNotBlank();
     }

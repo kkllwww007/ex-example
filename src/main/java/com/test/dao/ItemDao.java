@@ -13,9 +13,29 @@ import java.util.List;
 @Repository
 public interface ItemDao {
 
+    /**
+     * 保存物品信息
+     *
+     * @param itemDto 物品信息
+     * @throws Exception
+     */
     void insertItem(ItemDto itemDto) throws Exception;
 
+    /**
+     * 查询物品列表
+     *
+     * @param itemDto 物品信息查询条件
+     * @return 物品列表
+     * @throws Exception
+     */
     List<ItemDto> queryAll(QueryItemVo itemDto) throws Exception;
 
-    ItemDto findItemByBusinessId(ItemDto item);
+    /**
+     * 根据业务ID获取物品信息
+     *
+     * @param item 物品信息查询条件
+     * @return 物品信息
+     * @throws Exception
+     */
+    ItemDto findItemByBusinessId(ItemDto item) throws Exception;
 }

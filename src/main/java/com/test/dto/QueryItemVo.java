@@ -3,7 +3,7 @@ package com.test.dto;
 import java.util.Date;
 
 /**
- * 项目名称：${MODULE_NAME}
+ * 项目名称：ex-example
  * 包名：com.test.dto
  * 类名称：QueryItemVo.java
  * 类描述：

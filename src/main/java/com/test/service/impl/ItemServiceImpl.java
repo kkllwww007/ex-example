@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * 项目名称：${MODULE_NAME}
+ * 项目名称：ex-example
  * 包名：com.test.service.impl
  * 类名称：ItemServiceImpl.java
  * 类描述：
@@ -33,6 +33,13 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     private ItemDao itemDao;
 
+    /**
+     * 查询物品列表
+     *
+     * @param limit 条数
+     * @param item 查询参数对象
+     * @return 个数和列表
+     */
     @Override
     public Result queryItemsByLimit(QueryItemVo item, Integer limit) {
         Result result = new Result();
@@ -50,6 +57,11 @@ public class ItemServiceImpl implements ItemService {
         return result;
     }
 
+    /**
+     * 新增物品信息
+     *
+     * @param item 物品信息
+     */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void addItem(ItemDto item) {
@@ -86,9 +98,13 @@ public class ItemServiceImpl implements ItemService {
      * @return true 存在， false 不存在
      */
     private boolean checkBusinessId(ItemDto item) {
-        ItemDto result = itemDao.findItemByBusinessId(item);
-        if(result == null) {
-            return false;
+        try {
+            ItemDto result = itemDao.findItemByBusinessId(item);
+            if(result == null) {
+                return false;
+            }
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
         }
         return true;
     }
